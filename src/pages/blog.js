@@ -6,14 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
-import About from "../components/About.js"
-import Portfolio from "../components/Portfolio.js";
-import Tech from "../components/Tech";
-import Education from "../components/Education.js";
-import Honors from "../components/Honors.js";
-import Contact from "../components/Contact";
-
-class LandingPage extends React.Component {
+class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -22,18 +15,35 @@ class LandingPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <About />
-        // <Portfolio/>
-        <Tech/>
-        <Education/>
-        <Honors/>
-        <Contact/>
+        <Bio />
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          return (
+            <div key={node.fields.slug}>
+              <h3
+                style={{
+                  marginBottom: rhythm(1 / 4),
+                }}
+              >
+                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                  {title}
+                </Link>
+              </h3>
+              <small>{node.frontmatter.date}</small>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: node.frontmatter.description || node.excerpt,
+                }}
+              />
+            </div>
+          )
+        })}
       </Layout>
     )
   }
 }
 
-export default LandingPage
+export default BlogIndex
 
 export const pageQuery = graphql`
   query {

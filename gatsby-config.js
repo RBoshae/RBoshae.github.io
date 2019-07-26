@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Rick Boshae Blog`,
+    author: `Rick Boshae`,
+    description: `A portfolio and blog showcasing my skills.`,
+    siteUrl: `https://rboshae.github.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `RickBoshae`,
     },
   },
   plugins: [
@@ -68,6 +68,7 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

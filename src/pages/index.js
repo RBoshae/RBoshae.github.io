@@ -1,13 +1,13 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import  styled, {css} from "styled-components"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-
 import About from "../components/About.js"
-import Portfolio from "../components/Portfolio.js";
+// import Portfolio from "../components/Portfolio.js";
 import Tech from "../components/Tech";
 import Education from "../components/Education.js";
 import Honors from "../components/Honors.js";

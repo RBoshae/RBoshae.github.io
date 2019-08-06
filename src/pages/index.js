@@ -7,6 +7,7 @@ import { media } from "../utils/style";
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
+import NavBar from "../components/Navbar"
 import SocialIcons from "../components/socialIcons";
 // import SEO from "../components/seo"
 // import { rhythm } from "../utils/typography"
@@ -183,6 +184,7 @@ export default props => {
   );
   return (
     <Layout location={props.location}>
+      <NavBar main children={content.props.children} />
       {content}
     </Layout>
   )

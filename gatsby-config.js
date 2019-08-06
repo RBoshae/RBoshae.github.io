@@ -57,11 +57,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Rick Boshae Portfolio`,
+        short_name: `Rick Boshae`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `#292929`,
+        theme_color: `#405375`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },

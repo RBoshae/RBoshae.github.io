@@ -1,5 +1,12 @@
 import React from 'react'
+import styled, { css } from "styled-components"
+import { Flex, Box } from "grid-styled";
+import scrollToElement from "scroll-to-element";
 import Link from 'gatsby-link'
+
+// import Name from "./name";
+
+import { media } from "../utils/style";
 
 const ListLink = props =>
   <li

@@ -7,7 +7,7 @@ import { media } from "../utils/style";
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import NavBar from "../components/Navbar"
+import NavBar from "../components/NavBar"
 import SocialIcons from "../components/socialIcons";
 // import SEO from "../components/seo"
 // import { rhythm } from "../utils/typography"
@@ -63,7 +63,7 @@ const Section = styled.div`
   padding-bottom: 40px;
 
   a {
-    font-family: "Lato"
+    font-family: "Lato";
   }
 
   p {

@@ -158,7 +158,7 @@ export default props => {
         icons={[
           {
             name:"twitter",
-            href: "https://twitter.com/rboshae"
+            href: "https://twitter.com/rickboshae"
           },
           {
             name: "github-alt",

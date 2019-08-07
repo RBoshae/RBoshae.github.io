@@ -4,7 +4,7 @@ import { Flex, Box } from "grid-styled";
 import scrollToElement from "scroll-to-element";
 import Link from 'gatsby-link' // TODO remove.
 
-import Name from "./Name";
+import Name from "./name";
 
 import { media } from "../utils/style";
 

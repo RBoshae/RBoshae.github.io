@@ -1,75 +1,52 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import Link from "gatsby-link"
+import { Helmet } from "react-helmet";
+import styled, { createGlobalStyle } from "styled-components";
+import { Flex, Box } from "grid-styled";
 
-import { rhythm, scale } from "../utils/typography"
+import Footer from "./footer";
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
+const GlobalStyle = createGlobalStyle`
+  @import "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
-    return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    )
+  html {
+    max-width: 100vw;
+    overflow-x: hidden;
   }
-}
+  `;
 
-export default Layout
+const Body = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  width: 100vw;
+
+  img {
+    margin-bottom: 0;
+  }
+`;
+
+const Content = styled.div`
+  flex:1;
+`;
+
+const PageBase = ({ location, children }) => {
+  return (
+    <Body>
+    <GlobalStyle />
+      <Helmet
+        title="Rick Boshae"
+        meta={[
+          { name: "description", content: "portfolio" },
+          { name: "keywords", content: "rick, boshae, portfolio, blog" },
+          { name: "viewport", content: "width=device-width, intial-scale=1" }
+        ]}
+      />
+      <Content>{children}</Content>
+      {location && location.pathname != "/404" && <Footer /> }
+    </Body>
+  );
+};
+
+export default PageBase;

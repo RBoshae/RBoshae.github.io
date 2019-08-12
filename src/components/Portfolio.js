@@ -1,4 +1,11 @@
 import React from "react";
+import styled, { css } from "styled-components";
+import { Flex, Box } from "grid-styled";
+import Img from "gatsby-image";
+
+import { media } from "../utils/style";
+
+
 import ReactDom from "react-dom";
 import Link from "gatsby-link";
 import ProjectItem from './ProjectItem';
@@ -17,19 +24,54 @@ import ProjectItem from './ProjectItem';
 // import SpeakWithMe from "../content/assets/projects/SpeakWithMe/SpeakWithMe.jpg";
 // import Siesta from "../content/assets/projects/Siesta/Siesta.png";
 
+const Title = styled.h1`
+  font-family: "Raleway";
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom:40px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  border: none;
+  color: #292929;
 
+  ${props =>
+    props.small &&
+    css`
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      line-height: 24px;
+    `}
+`;
+
+const Tile = styled.div`
+`;
+const TileContent = styled.a`
+`;
 
 const projectsContainer = {
   position: 'absolute'
 };
 
+const project = ({ excerpt, image, tags, slug, title, timeToRead }) => (
+  <Title>
+    <a href={slug}>
+      {image ? <Img sizes={image.childImageSharp.sizes} /> : <div />}
+    </a>
+    <TileContent href={slug}>
+      <h1>{title}</h1>
+      <p>{excerpt}</p>
+    </TileContent>
+  </Title>
+)
 
 class Portfolio extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      projects: []
-    }
+  constructor(props) {
+    super(props);
+
+    this.state = { projects: [], viewAll: false};
+
   }
 
   //IDEA: Implement a scraper to grab projects from GitHub automatically.

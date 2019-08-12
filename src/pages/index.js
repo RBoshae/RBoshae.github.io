@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import  styled, {css} from "styled-components"
+import  styled, { css } from "styled-components"
 import FlickrHero from "react-flickr-hero"
 
 import { media } from "../utils/style";
@@ -170,15 +170,32 @@ export default props => {
           }
         ]}
         />
+
+      <a id="about-me">About Me</a>
       <Section>
-      <About />
+        <About />
       </Section>
+
+      <a id="portfolio">Portfolio</a>
       <Section>
-      <Portfolio/>
+        <Portfolio/>
       </Section>
-      <Tech/>
-      <Education/>
-      <Honors/>
+
+      <a id="tech">Tech</a>
+      <Section>
+        <Tech/>
+      </Section>
+
+      <a id="education">Education</a>
+      <Section>
+        <Education/>
+      </Section>
+
+      <a id="honorsAndAwards">Honors & Awards</a>
+      <Section>
+        <Honors/>
+      </Section>
+
       <Contact/>
     </Content>
   );
@@ -187,31 +204,8 @@ export default props => {
       <NavBar main children={content.props.children} />
       {content}
     </Layout>
-  )
-
-}
-
-// class LandingPage extends React.Component {
-//   render() {
-//     const { data } = this.props
-//     const siteTitle = data.site.siteMetadata.title
-//     const posts = data.allMarkdownRemark.edges
-//
-//     return (
-//       <Layout location={this.props.location} title={siteTitle}>
-//         <SEO title="All posts" />
-//         <About />
-//         <Portfolio/>
-//         <Tech/>
-//         <Education/>
-//         <Honors/>
-//         <Contact/>
-//       </Layout>
-//     )
-//   }
-// }
-//
-// export default LandingPage
+  );
+};
 
 export const pageQuery = graphql`
   query {

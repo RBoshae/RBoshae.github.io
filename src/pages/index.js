@@ -178,7 +178,7 @@ export default props => {
 
       <a id="portfolio">Portfolio</a>
       <Section>
-        <Portfolio/>
+        <Portfolio projects={props.data.allMarkdownRemark.edges}/>
       </Section>
 
       <a id="tech">Tech</a>
@@ -214,16 +214,17 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "~/content/assets/projects/"}}) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 120)
+          frontmatter {
+            title
+            tags
+            date(formatString: "MMMM DD, YYY")
+          }
           fields {
             slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
           }
         }
       }

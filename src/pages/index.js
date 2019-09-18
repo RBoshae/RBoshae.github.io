@@ -208,26 +208,25 @@ export default props => {
 };
 
 export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
+query {
+  site {
+    siteMetadata {
+      title
     }
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "~/content/assets/projects/"}}) {
-      edges {
-        node {
-          excerpt(pruneLength: 120)
-          frontmatter {
-            title
-            tags
-            date(formatString: "MMMM DD, YYY")
-          }
-          fields {
-            slug
-          }
+  }
+  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "~/content/assets/projects/"}}) {
+    edges {
+      node {
+        excerpt(pruneLength: 120)
+        frontmatter {
+          title
+          tags
+        }
+        fields {
+          slug
         }
       }
     }
   }
+}
 `

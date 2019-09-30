@@ -12,7 +12,7 @@ import SocialIcons from "../components/socialIcons";
 // import SEO from "../components/seo"
 // import { rhythm } from "../utils/typography"
 import About from "../components/About.js"
-import Portfolio from "../components/Portfolio.js";
+import Portfolio from "../components/portfolio.js";
 import Tech from "../components/Tech";
 import Education from "../components/Education.js";
 import Honors from "../components/Honors.js";
@@ -208,7 +208,7 @@ export default props => {
 };
 
 export const pageQuery = graphql`
-query {
+query MyQuery {
   site {
     siteMetadata {
       title

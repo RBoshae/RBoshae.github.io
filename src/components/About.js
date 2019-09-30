@@ -33,9 +33,9 @@ const About = () => {
             </p>
             <Title>Areas of interest</Title>
             <p>
-            I have a variety of interests but I tend to work on projects
-            using AI, Machine Learning, Graphics, VR, Networking, Databases,
-             Mobile Applications.</p>
+            I have a variety of interests. I tend to work on projects
+            involving AI, Machine Learning, Graphics, VR, Networking, Databases,
+             Mobile Applications, and Signal Processing.</p>
           </Box>
 
         </Flex>

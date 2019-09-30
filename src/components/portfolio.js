@@ -68,7 +68,7 @@ class Portfolio extends React.Component {
   }
 
   toggleShow() {
-    this.setState({ viewAll: ~this.state.viewAll });
+    this.setState({ viewAll: !this.state.viewAll });
   }
 
   render() {
@@ -91,7 +91,7 @@ class Portfolio extends React.Component {
         {projects}
         <Box m="auto">
           <Button center onClick={() => this.toggleShow()}>
-            {this.state.viewAll ? "View Less" : "View Less"}
+            {this.state.viewAll ? "View Less" : "View More"}
           </Button>
         </Box>
       </Flex>

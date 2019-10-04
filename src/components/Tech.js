@@ -1,17 +1,35 @@
 import React from 'react';
+import styled, { css } from "styled-components";
 
-const Tech = ()=> {
-  return (
-    <div>
-      <section id="tech">
-        <h1>Technical Skills</h1>
-        <h3>Software</h3>
-        <p>Android Studio, Git, GitHub, MATLAB, XCode</p>
-        <h3>Programming</h3>
-        <p>C, C++, C#, CSS, HTML, Java, JavaScript, JSON, jQuery, PostgreSQL, Python, React, SQL</p>
-      </section>
-    </div>
-  );
+import { media } from "../utils/style";
+import Showcase from "../components/showcase"
+
+
+
+class Tech extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {logos:[]}
+  }
+
+  componentWillRecievedProps(newProps, oldProps) {
+    if (
+      newProps.logos &&
+      JSON.stringify(newProps.logos) !== JSON.stringify(oldProps.logos)
+    ) {
+      this.setState({ logos: newProps.logos });
+    }
+  }
+
+  render() {
+    const logos = this.props.logos; 
+  
+    return(     
+      <Showcase
+          images={logos}
+        />
+    );
+  }
 }
 
 export default Tech;

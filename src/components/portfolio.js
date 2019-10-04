@@ -180,7 +180,6 @@ class Portfolio extends React.Component {
           />
       </Box>
     ));
-    console.debug("projects: ", projects);
     if (!this.state.viewAll) {
       projects.splice(4);
     }

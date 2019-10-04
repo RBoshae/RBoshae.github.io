@@ -183,7 +183,7 @@ export default props => {
 
       <a id="tech">Tech</a>
       <Section>
-        <Tech/>
+        <Tech logos={props.data.allImageSharp.edges}/>
       </Section>
 
       <a id="education">Education</a>
@@ -225,6 +225,29 @@ query MyQuery {
         fields {
           slug
         }
+      }
+    }
+  }
+  allImageSharp: allFile(filter: {relativePath: {regex: "/logos/"}}) {
+    edges {
+      node {
+        id
+        childImageSharp {
+          sizes {
+            base64
+            tracedSVG
+            aspectRatio
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            sizes
+            originalImg
+            originalName
+            presentationWidth
+            presentationHeight
+          }
+        }  
       }
     }
   }

@@ -155,9 +155,9 @@ export default props => {
   const content = (
     <Content>
       <FlickrHero
-        api_key="1b4e5b0203fab0d5731afe68f0a543e1"
-        user_id="132343752@N06"
-        album_id="72157694825254121"
+        api_key="0d983d64d487fe4c4568fd824d39c29b"
+        user_id="94057848@N06"
+        album_id="72157711187091298"
         fillPage
       />
       <SocialIcons

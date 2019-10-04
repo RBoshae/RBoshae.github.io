@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 
 import { media } from "../utils/style";
 
-import Button from './button'
+import Button from "./button";
 
 
 const Title = styled.h1`
@@ -30,16 +30,114 @@ const Title = styled.h1`
 `;
 
 const Tile = styled.div`
-`;
-const TileContent = styled.a`
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  position: relative;
+  margin-bottom: 32px;
+  overflow: hidden;
+  & > a > div,
+  & > a > div::after {
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+    transform: skewY(-2.2deg);
+  }
+  & a > div {
+    top: -8px;
+  }
+  &:hover > a > div {
+    transform: scale(1.1);
+  }
+  &:hover > a > div::after {
+    opacity: 0.5;
+  }
+  img {
+    height: 55% !important;
+  }
+  ${media.ws`
+    & > a > div, & > a > div::after {
+      transform: skewY(-5.2deg);
+
+    }
+  `}
 `;
 
-const projectsContainer = {
-  position: 'absolute'
-};
+const TileContent = styled.a`
+  color: #fff;
+  text-decoration: none !important;
+  cursor: pointer;
+  h1 {
+    position: inherit;
+    top: 6vw;
+    left: 5%;
+    right: 5%;
+    font-family: 'Raleway';
+    border: none;
+  }
+  p {
+    font-size: 1.2em;
+    position: absolute;
+    bottom: 2vw;
+    left: 5%;
+    right: 5%;
+    color: #111;
+    font-family: 'Lato';
+    font-weight: 500;
+  }
+
+  ${media.md`
+    max-width: 90%;
+  `}
+  ${media.ws`
+    p {
+      display: none;
+    }
+    h1 {
+      top: 33vw !important;
+      color: #000;
+    }
+  `}
+  @media (max-width: 1594px) {
+    p {
+      bottom: 0;
+      font-size: 1em;
+    }
+    h1 {
+      top: 1vw;
+    }
+ }
+ @media (max-width: 1258px) {
+   p {
+     line-height: 1em;
+   }
+   h1 {
+     margin-top: 1vw;
+   }
+ @media (max-width: 828px) {
+   p {
+     line-height: inherit;
+   }
+   h1 {
+     margin-top: 12vw;
+   }
+ @media (max-width: 640px) {
+   p {
+     line-height: 1.5em;
+     font-size: 1.5em;
+   }
+ @media (max-width: 440px) {
+   p {
+     line-height: inherit;
+     font-size: 1.1em;
+   }
+ @media (max-width: 342px) {
+   p {
+     line-height: 1.2em;
+     font-size: 0.95em;
+   }
+}
+`;
 
 const Project = ({ excerpt, image, tags, slug, title, timeToRead }) => (
-  <Title>
+  <Tile>
     <a href={slug}>
       {image ? <Img sizes={image.childImageSharp.sizes} /> : <div />}
     </a>
@@ -47,15 +145,14 @@ const Project = ({ excerpt, image, tags, slug, title, timeToRead }) => (
       <h1>{title}</h1>
       <p>{excerpt}</p>
     </TileContent>
-  </Title>
-)
+  </Tile>
+);
 
 class Portfolio extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { projects: [], viewAll: false};
-
+    this.state = { projects: [], viewAll: false };
   }
 
   componentWillRecievedProps(newProps, oldProps) {
@@ -63,7 +160,7 @@ class Portfolio extends React.Component {
       newProps.projects &&
       JSON.stringify(newProps.projects) !== JSON.stringify(oldProps.projects)
     ) {
-      this.setState({projects: newProps.projects});
+      this.setState({ projects: newProps.projects });
     }
   }
 
@@ -80,9 +177,10 @@ class Portfolio extends React.Component {
           slug={project.node.fields.slug}
           timeToRead={project.node.timeToRead}
           {...project.node.frontmatter}
-        />
+          />
       </Box>
     ));
+    console.debug("projects: ", projects);
     if (!this.state.viewAll) {
       projects.splice(4);
     }

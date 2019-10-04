@@ -5,7 +5,7 @@ import FlickrHero from "react-flickr-hero"
 
 import { media } from "../utils/style";
 
-import Bio from "../components/bio"
+// import Bio from "../components/bio"
 import Layout from "../components/layout"
 import NavBar from "../components/NavBar"
 import SocialIcons from "../components/socialIcons";
@@ -30,32 +30,32 @@ const Content = styled.div`
   }
 `;
 
-const Testo = styled.div`
-  width: 100vw !important;
-  height: 100vw !important;
-  background: gray;
-  `;
+// const Testo = styled.div`
+//   width: 100vw !important;
+//   height: 100vw !important;
+//   background: gray;
+//   `;
 
-const Title = styled.h1`
-  font-family: "Raleway";
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  margin-bottom:40px;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 40px;
-  border: none;
-  color: #292929;
+// const Title = styled.h1`
+//   font-family: "Raleway";
+//   text-transform: uppercase;
+//   letter-spacing: 6px;
+//   margin-bottom:40px;
+//   font-weight: 400;
+//   font-size: 32px;
+//   line-height: 40px;
+//   border: none;
+//   color: #292929;
 
-  ${props =>
-    props.small &&
-    css`
-      font-size: 12px;
-      letter-spacing: 2px;
-      font-weight: 700;
-      line-height: 24px;
-    `}
-`;
+//   ${props =>
+//     props.small &&
+//     css`
+//       font-size: 12px;
+//       letter-spacing: 2px;
+//       font-weight: 700;
+//       line-height: 24px;
+//     `}
+// `;
 
 const Section = styled.div`
   text-align: center;
@@ -121,7 +121,7 @@ const Section = styled.div`
     `}
 `;
 
-const Item = styled.div`
+const Project = styled.div`
   width: 40%;
   margin: 0 auto;
   border: none;

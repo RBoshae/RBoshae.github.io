@@ -13,6 +13,7 @@ import SocialIcons from "../components/socialIcons";
 // import { rhythm } from "../utils/typography"
 import About from "../components/About.js"
 import Portfolio from "../components/portfolio.js";
+import Experience from "../components/Experience.js";
 import Tech from "../components/Tech";
 import Education from "../components/Education.js";
 import Honors from "../components/Honors.js";
@@ -30,32 +31,32 @@ const Content = styled.div`
   }
 `;
 
-// const Testo = styled.div`
-//   width: 100vw !important;
-//   height: 100vw !important;
-//   background: gray;
-//   `;
+const Testo = styled.div`
+  width: 100vw !important;
+  height: 100vw !important;
+  background: gray;
+  `;
 
-// const Title = styled.h1`
-//   font-family: "Raleway";
-//   text-transform: uppercase;
-//   letter-spacing: 6px;
-//   margin-bottom:40px;
-//   font-weight: 400;
-//   font-size: 32px;
-//   line-height: 40px;
-//   border: none;
-//   color: #292929;
+const Title = styled.h1`
+  font-family: "Raleway";
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom:40px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  border: none;
+  color: #292929;
 
-//   ${props =>
-//     props.small &&
-//     css`
-//       font-size: 12px;
-//       letter-spacing: 2px;
-//       font-weight: 700;
-//       line-height: 24px;
-//     `}
-// `;
+  ${props =>
+    props.small &&
+    css`
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      line-height: 24px;
+    `}
+`;
 
 const Section = styled.div`
   text-align: center;
@@ -116,26 +117,38 @@ const Section = styled.div`
         & > div {
           margin-left: 3vw !important;
         }
-      `}
-
     `}
-`;
+    `}
 
-const Project = styled.div`
-  width: 40%;
-  margin: 0 auto;
-  border: none;
-  border-bottom: 1px solid #eee;
-  h6 {
-    letter-spacing: 2px;
-    font-weight: 700;
-    padding-top: 6px;
-  }
-  span,
-  p {
-    margin-bottom: 24px;
-    opacity: 0.5;
-  }
+  ${props =>
+    props.dark &&
+    css`
+      background: #292929;
+      * {
+        color: #eee;
+      }
+      span {
+        text-align: left;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        opacity: 0.5;
+      }
+      span,
+      p {
+        color: #fefefe !important;
+      }
+      h6 {
+        color: #fff;
+        font-weight: 700;
+      }
+      h4 {
+        color: #fff;
+      }
+      div {
+        border-bottom: 1px solid #333 !important;
+      }
+    `}
 `;
 
 export default props => {
@@ -179,6 +192,11 @@ export default props => {
       <a id="portfolio">Portfolio</a>
       <Section>
         <Portfolio projects={props.data.allMarkdownRemark.edges}/>
+      </Section>
+
+      <a id="experience">Experience</a>
+      <Section center dark>
+        <Experience/>
       </Section>
 
       <a id="tech">Tech</a>

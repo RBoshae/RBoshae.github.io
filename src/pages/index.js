@@ -210,11 +210,9 @@ export default props => {
       </Section>
 
       <a id="honorsAndAwards">Honors & Awards</a>
-      <Section>
+      <Section center>
         <Honors/>
       </Section>
-
-      <Contact/>
     </Content>
   );
   return (

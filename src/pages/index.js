@@ -1,23 +1,21 @@
-import React from "react"
-import { graphql } from "gatsby"
-import  styled, { css } from "styled-components"
-import FlickrHero from "react-flickr-hero"
+import React from "react";
+import { graphql } from "gatsby";
+import { Flex, Box } from "grid-styled";
+import styled, { css } from "styled-components";
+import Img from "gatsby-image";
+import FlickrHero from "react-flickr-hero";
 
 import { media } from "../utils/style";
 
-// import Bio from "../components/bio"
-import Layout from "../components/layout"
-import NavBar from "../components/NavBar"
+import Layout from "../components/layout";
+import NavBar from "../components/NavBar";
 import SocialIcons from "../components/socialIcons";
-// import SEO from "../components/seo"
-// import { rhythm } from "../utils/typography"
 import About from "../components/About.js"
-import Portfolio from "../components/portfolio.js";
+import Portfolio from "../components/Portfolio.js";
 import Experience from "../components/Experience.js";
 import Tech from "../components/Tech";
 import Education from "../components/Education.js";
 import Honors from "../components/Honors.js";
-import Contact from "../components/Contact";
 
 const Content = styled.div`
   & > a {
@@ -25,15 +23,14 @@ const Content = styled.div`
     display: block;
     height: 0;
   }
-
   & > h1 {
-    test-align: center;
+    text-align: center;
   }
 `;
 
 const Testo = styled.div`
   width: 100vw !important;
-  height: 100vw !important;
+  height: 100vh !important;
   background: gray;
   `;
 
@@ -41,7 +38,7 @@ const Title = styled.h1`
   font-family: "Raleway";
   text-transform: uppercase;
   letter-spacing: 6px;
-  margin-bottom:40px;
+  margin-bottom: 40px;
   font-weight: 400;
   font-size: 32px;
   line-height: 40px;
@@ -170,7 +167,7 @@ export default props => {
         }}
         icons={[
           {
-            name:"twitter",
+            name: "twitter",
             href: "https://twitter.com/rickboshae"
           },
           {
@@ -189,23 +186,22 @@ export default props => {
         <About />
       </Section>
 
+      <Title small>Portfolio</Title>
       <a id="portfolio">Portfolio</a>
-      <Section>
-        <Portfolio projects={props.data.allMarkdownRemark.edges}/>
-      </Section>
+      <Portfolio projects={props.data.allMarkdownRemark.edges}/>
 
       <a id="experience">Experience</a>
-      <Section dark center>
+      <Section center dark>
         <Experience/>
       </Section>
 
       <a id="tech">Tech</a>
-      <Section>
+      <Section center>
         <Tech logos={props.data.allImageSharp.edges}/>
       </Section>
 
       <a id="education">Education</a>
-      <Section dark center>
+      <Section center dark>
         <Education/>
       </Section>
 
@@ -224,7 +220,7 @@ export default props => {
 };
 
 export const pageQuery = graphql`
-query MyQuery {
+query IndexQuery {
   site {
     siteMetadata {
       title
@@ -268,4 +264,4 @@ query MyQuery {
     }
   }
 }
-`
+`;

@@ -24,10 +24,14 @@ class Tech extends React.Component {
   render() {
     const logos = this.props.logos; 
   
-    return(     
-      <Showcase
-          images={logos}
-        />
+    return(
+      <div>
+        <h4>Tech</h4>
+        <span>Technologies I enjoy working with.</span>     
+        <Showcase
+            images={logos}
+          />
+      </div>
     );
   }
 }

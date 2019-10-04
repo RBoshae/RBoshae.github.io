@@ -195,7 +195,7 @@ export default props => {
       </Section>
 
       <a id="experience">Experience</a>
-      <Section center dark>
+      <Section dark center>
         <Experience/>
       </Section>
 
@@ -205,7 +205,7 @@ export default props => {
       </Section>
 
       <a id="education">Education</a>
-      <Section>
+      <Section dark center>
         <Education/>
       </Section>
 

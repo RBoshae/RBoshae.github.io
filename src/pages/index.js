@@ -11,12 +11,12 @@ import Layout from "../components/layout";
 import NavBar from "../components/navbar";
 import HeroText from "../components/heroText";
 import SocialIcons from "../components/socialIcons";
-import About from "../components/About.js"
-import Portfolio from "../components/portfolio.js";
-import Experience from "../components/experience.js";
+import About from "../components/about"
+import Portfolio from "../components/portfolio";
+import Experience from "../components/experience";
 import Tech from "../components/tech";
-import Education from "../components/education.js";
-import Honors from "../components/honors.js";
+import Education from "../components/education";
+import Honors from "../components/honors";
 
 const Content = styled.div`
   & > a {
@@ -149,6 +149,37 @@ const Section = styled.div`
     `}
 `;
 
+const Item = styled.div`
+  width: 40%;
+  margin: 0 auto;
+  border: none;
+  border-bottom: 1px solid #eee;
+  h6 {
+    letter-spacing: 2px;
+    font-weight: 700;
+    padding-top: 6px;
+  }
+  span,
+  p {
+    font-size: 13px;
+    line-height: 24px;
+    color: #666;
+  }
+  span {
+    opacity: 0.75;
+    float: right;
+    text-transform: uppercase;
+  }
+  p {
+    margin-bottom: 24px;
+    opacity: 0.5;
+  }
+  ${media.xs`
+    width: 90%;
+
+  `}
+`;
+
 export default props => {
   const content = (
     <Content>
@@ -194,11 +225,36 @@ export default props => {
 
       <a id="experience">Experience</a>
       <Section center dark>
-        <Experience/>
+        <h4>Experience</h4>
+        <span>Where I've worked.</span>
+        <Item>
+          <span>Nov 2018 - PRESENT</span>
+          <h6>L3Harris Ocean Systems</h6>
+          <p>Software Engineer</p>
+        </Item>
+
+        <Item>
+          <span>Jun 2016 - May 2017</span>
+          <h6>UC Riverside Embedded Systems Lab</h6>
+          <p>Undergraduate Research Assistant</p>
+        </Item>
+
+        <Item>
+          <span>Feb 2016 - Jun 2017</span>
+          <h6>Youth Policy Institute Charter Schools</h6>
+          <p>Technical Support Technician</p>
+        </Item>
+
+        <Item>
+            <span>Jun 2012 - May 2015</span>
+            <h6>MarketStar</h6>
+            <p>Territory Manager, Google</p>
+        </Item>
       </Section>
 
       <a id="tech">Tech</a>
       <Section center>
+        <h4>Tech</h4>
         <Tech logos={props.data.allImageSharp.edges}/>
       </Section>
 

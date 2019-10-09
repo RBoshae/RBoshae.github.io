@@ -1,39 +1,37 @@
 import React from 'react';
 import styled, { css } from "styled-components";
-
+import { Flex, Box } from "grid-styled";
+import Img from "gatsby-image";
 import { media } from "../utils/style";
-import Showcase from "../components/showcase"
 
+const Base = styled.div`
+  width: 40%;
+  margin: 0 auto !important;
+  padding: 0;
+  overflow: hidden;
+  padding-top: 40px;
 
+  ${media.xs`
+    width: 95%;
+    margin-left: 0;
+  `}
+`;
 
 class Tech extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {logos:[]}
-  }
-
-  componentWillRecievedProps(newProps, oldProps) {
-    if (
-      newProps.logos &&
-      JSON.stringify(newProps.logos) !== JSON.stringify(oldProps.logos)
-    ) {
-      this.setState({ logos: newProps.logos });
-    }
-  }
-
   render() {
-    const logos = this.props.logos; 
-  
-    return(
-      <div>
-        <h4>Tech</h4>
-        <span>Technologies I enjoy working with.</span>     
-        <Showcase
-            images={logos}
-          />
-      </div>
+    const logos = this.props.logos.reverse().map(logo => (
+      <Box key={logo.node.id} px={2} width={[1 / 2, 1 / 3]}>
+        <Img sizes={logo.node.childImageSharp.sizes} />
+      </Box>
+    ));
+    return (
+      <Base>
+        <span>Technologies I enjoy working with</span>
+        <Flex flexWrap="wrap">{logos}</Flex>
+      </Base>
     );
   }
 }
+
 
 export default Tech;

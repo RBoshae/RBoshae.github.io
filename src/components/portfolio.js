@@ -1,33 +1,10 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Flex, Box } from "grid-styled";
 import Img from "gatsby-image";
 
 import { media } from "../utils/style";
-
 import Button from "./button";
-
-
-const Title = styled.h1`
-  font-family: "Raleway";
-  text-transform: uppercase;
-  letter-spacing: 6px;
-  margin-bottom:40px;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 40px;
-  border: none;
-  color: #292929;
-
-  ${props =>
-    props.small &&
-    css`
-      font-size: 12px;
-      letter-spacing: 2px;
-      font-weight: 700;
-      line-height: 24px;
-    `}
-`;
 
 const Tile = styled.div`
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);

@@ -48,20 +48,20 @@ class HeroText extends React.Component {
     return (
       <StyledTypist cursor={{ show: false }} {...this.props}>
         <strong>I Make</strong> Websites
-        <Typist.Backspace count={9} delay={300} />
+        <Typist.Backspace count={9} delay={500} />
         <span> Embedded Programs </span>
-        <Typist.Backspace count={9} delay={300} />
-        <span> Android Apps</span>
-        <Typist.Backspace count={12} delay={300} />
+        <Typist.Backspace count={18} delay={500} />
+        <span> Android Applications</span>
+        <Typist.Backspace count={20} delay={500} />
         <span> Poor Life Decisions</span>
-        <Typist.Delay ms={100} />
-        <span>.</span>
-        <Typist.Delay ms={200} />
-        <span>.</span>
         <Typist.Delay ms={300} />
         <span>.</span>
-        <Typist.Backspace count={29} delay={10} />
-        <strong>But Mostly Just</strong> Cool Stuff
+        <Typist.Delay ms={400} />
+        <span>.</span>
+        <Typist.Delay ms={500} />
+        <span>.</span>
+        <Typist.Backspace count={31} delay={10} />
+        <strong>But Mostly I Just Make</strong> Cool Stuff
       </StyledTypist>
     );
   }

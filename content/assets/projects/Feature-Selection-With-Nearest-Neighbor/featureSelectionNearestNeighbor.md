@@ -1,13 +1,13 @@
 ---
 title: "Feature Selection Optimizer"
-date:  "Nov 20, 2017"
+date:  2017-11-20
 tags:  ["C++", "Artificial Intelligence"]
 image: './featureOptimizer.jpg'
 ---
 
-[Breakout], the good ol' Atari game reinvented. Every bit was hand wired and 
-programmed from scratch by yours truly. The best part - reverse engineering the
-Nintendo controller. **You can visit the site here:** [Breakout]
+[Feature Selection Optimizer], A machine learning algorithm that optimizes the
+nearest neighbor classifier. I use forward and backward selection to drop 
+irrelevant features from the data set.   **You can visit the site here:** [Feature Selection Optimizer]
 
 <!--- reference links --->
 [Feature Selection Optimizer]: <https://github.com/RBoshae/feature-selection-with-nearest-neighbor>

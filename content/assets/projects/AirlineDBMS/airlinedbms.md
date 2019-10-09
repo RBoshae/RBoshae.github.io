@@ -1,6 +1,6 @@
 ---
 title: "Airline Database Management System"
-date: "Jun 10, 2018"
+date: 2018-06-10
 tags: ["Java", "PostgreSQL"]
 image: './AirlineDBMS.jpg'
 ---

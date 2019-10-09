@@ -255,17 +255,57 @@ export default props => {
       <a id="tech">Tech</a>
       <Section center>
         <h4>Tech</h4>
-        <Tech logos={props.data.allImageSharp.edges}/>
+        <Tech 
+          logos={
+            props.data.allImageSharp.edges
+            }
+            />
       </Section>
 
       <a id="education">Education</a>
       <Section center dark>
-        <Education/>
+      <h4>Education</h4>
+      <Item>
+        <span>2016 - 2018</span>
+        <h6>B.S. Computer Science With High Honors, GPA 3.77</h6>
+        <p>University of California, Riverside</p>
+      </Item>
+      <Item>
+        <span>Transfer 2016</span>
+        <h6>General Science</h6>
+        <p>Santa Monica College</p>
+      </Item>
+      <Item>
+        <span>Transfer 2016</span>
+        <h6>Mathematics</h6>
+        <p>Moorpark College</p>
+      </Item>
       </Section>
 
       <a id="honorsAndAwards">Honors & Awards</a>
       <Section center>
-        <Honors/>
+      <h4>Honors & Awards</h4>
+      <span>A list of honors awards I have received for my work.</span>
+      <Item>
+        <span>2018</span>
+        <h6>Major League Hackathon 2nd Place Winner</h6>
+        <p>Citrus Hacks</p>
+      </Item>
+      <Item>
+        <span>2018</span>
+        <h6>Best Game Hack</h6>
+        <p>Gigabyte/AORUS</p>
+      </Item>
+      <Item>
+        <span>2018</span>
+        <h6>Equipvision's Choice Award</h6>
+        <p>Equipvision</p>
+      </Item>
+      <Item>
+        <span>2016</span>
+        <h6>Summer Bridge to Research Grant</h6>
+        <p>UC RIverside</p>
+      </Item>
       </Section>
     </Content>
   );
@@ -287,13 +327,28 @@ query IndexQuery {
   allMarkdownRemark(filter: {fileAbsolutePath: {regex: "~/content/assets/projects/"}}) {
     edges {
       node {
+        timeToRead
         excerpt(pruneLength: 120)
+        fields {
+          slug
+        }
         frontmatter {
           title
           tags
-        }
-        fields {
-          slug
+          image {
+            childImageSharp {
+              sizes(
+                maxWidth: 500
+                duotone: {
+                  highlight: "#333333"
+                  shadow: "#111111"
+                  opacity: 65
+                }
+              ) {
+                ...GatsbyImageSharpSizes
+              }
+            }
+          }
         }
       }
     }
@@ -303,7 +358,7 @@ query IndexQuery {
       node {
         id
         childImageSharp {
-          sizes {
+          sizes(fit: CONTAIN) {
             base64
             tracedSVG
             aspectRatio

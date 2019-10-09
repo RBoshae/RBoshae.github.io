@@ -2,6 +2,19 @@ import React from 'react';
 import styled from "styled-components";
 import { media } from "../utils/style";
 
+const Base = styled.div`
+  width: 40%;
+  margin: 0 auto !important;
+  padding: 0;
+  overflow: hidden;
+  padding-top: 40px;
+
+  ${media.xs`
+    width: 95%;
+    margin-left: 0;
+  `}
+`;
+
 const Item = styled.div`
   width: 50%;
   margin: 0;

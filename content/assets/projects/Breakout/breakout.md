@@ -1,6 +1,6 @@
 ---
 title: "Breakout"
-date:  "Nov 25, 2017"
+date:  2017-11-25
 tags:  ["C", "Embedded Systems"]
 image: './breakout.jpg'
 ---

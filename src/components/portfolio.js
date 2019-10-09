@@ -42,7 +42,7 @@ const TileContent = styled.a`
   text-decoration: none !important;
   cursor: pointer;
   h1 {
-    position: inherit;
+    position: absolute;
     top: 6vw;
     left: 5%;
     right: 5%;

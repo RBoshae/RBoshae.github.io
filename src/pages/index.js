@@ -8,14 +8,15 @@ import FlickrHero from "react-flickr-hero";
 import { media } from "../utils/style";
 
 import Layout from "../components/layout";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/navbar";
+import HeroText from "../components/heroText";
 import SocialIcons from "../components/socialIcons";
 import About from "../components/About.js"
-import Portfolio from "../components/Portfolio.js";
-import Experience from "../components/Experience.js";
-import Tech from "../components/Tech";
-import Education from "../components/Education.js";
-import Honors from "../components/Honors.js";
+import Portfolio from "../components/portfolio.js";
+import Experience from "../components/experience.js";
+import Tech from "../components/tech";
+import Education from "../components/education.js";
+import Honors from "../components/honors.js";
 
 const Content = styled.div`
   & > a {
@@ -157,6 +158,7 @@ export default props => {
         album_id="72157711187091298"
         fillPage
       />
+      <HeroText />
       <SocialIcons
         style={{
           position: "absolute",

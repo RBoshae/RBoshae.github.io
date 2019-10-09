@@ -23,7 +23,7 @@ const About = () => {
             <p>
             Hi there, I'm Rick Boshae, a Software Engineer living in sunny Los
             Angeles, California. Currently I work for L3Harris Technologies
-            focusing on software development for sonar systems. When I'm not
+            where I focus on software development for sonar systems. When I'm not
             hard at work decoding signal from noise, you'll likely find me
             exploring new technologies and building useful things. I hope to
             share a few things I've learned here and showcase some of my latest

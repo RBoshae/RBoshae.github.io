@@ -35,7 +35,7 @@ const Item = styled.div`
 
 const Experience = () => {
   return(
-    <div id="experience">
+    <div class="experience" margin="0">
       <h4>Experience</h4>
       <span>Where I've worked</span>
       <Item>

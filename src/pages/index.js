@@ -324,7 +324,7 @@ query IndexQuery {
       title
     }
   }
-  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "~/content/assets/projects/"}}) {
+  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "~/content/assets/projects/"}, frontmatter: {date: {}}}) {
     edges {
       node {
         timeToRead
@@ -334,21 +334,10 @@ query IndexQuery {
         }
         frontmatter {
           title
+          date
           tags
-          image {
-            childImageSharp {
-              sizes(
-                maxWidth: 500
-                duotone: {
-                  highlight: "#333333"
-                  shadow: "#111111"
-                  opacity: 65
-                }
-              ) {
-                ...GatsbyImageSharpSizes
-              }
-            }
-          }
+          image 
+          
         }
       }
     }

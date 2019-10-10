@@ -1,7 +1,7 @@
 ---
 title: "Sliding Puzzle Solver"
-date:  "Mar 12, 2018"
-tags:  ["Java", "Android"]
+date:  2018-3-12
+tags:  ["C++", "AI"]
 image: './slidingPuzzle.png'
 ---
 

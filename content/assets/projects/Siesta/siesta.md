@@ -1,6 +1,6 @@
 ---
 title: "Siesta"
-date:  "Mar 12, 2018"
+date:  2018-3-12
 tags:  ["Java", "Android"]
 image: './siesta.png'
 ---

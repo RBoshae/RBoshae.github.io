@@ -1,6 +1,6 @@
 ---
 title: "Phantom Edge"
-date: "2018-06-14"
+date: 2018-06-14
 tags: ["C#", "Unity", "Oculus Rift", "Oculus Touch"]
 image: './phantomedge.jpg'
 ---

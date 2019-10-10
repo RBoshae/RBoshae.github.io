@@ -334,6 +334,7 @@ query IndexQuery {
         }
         frontmatter {
           title
+          date
           tags
           image {
             childImageSharp {

@@ -1,6 +1,6 @@
 ---
 title: "Ray Tracer"
-date:  "Dec 12, 2017"
+date:  2017-12-12
 tags:  ["C++", "Graphics"]
 image: './rayTracer.jpg'
 ---

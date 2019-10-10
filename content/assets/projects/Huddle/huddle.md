@@ -1,8 +1,8 @@
 ---
 title: "Huddle"
-date:  "Nov 30, 2017"
+date:  2017-11-30
 tags:  ["React", "HTML", "CSS", "JavaScript"]
-image: './huddle.jpg'
+image: './huddle.png'
 ---
 
 [Huddle] is a workflow management web application designed to viualize your

@@ -1,6 +1,6 @@
 ---
 title: "MiniGL"
-date:  "Nov 28, 2017"
+date:  2017-11-28
 tags:  ["C++", "Graphics"]
 image: './MiniGL.png'
 ---

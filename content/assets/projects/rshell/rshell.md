@@ -1,6 +1,6 @@
 ---
 title: "R'shell"
-date:  "Dec 2, 2016"
+date:  2016-12-2
 tags:  ["C++"]
 image: './rshell.png'
 ---

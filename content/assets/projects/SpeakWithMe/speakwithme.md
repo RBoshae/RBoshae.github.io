@@ -1,13 +1,13 @@
 ---
 title: "Speak With Me"
-date: "Apr 22, 2018"
+date: 2018-4-22
 tags: ["C#", "Unity", "Oculus Rift", "Oculus Remote"]
-image: './AirlineDBMS.jpg'
+image: './SpeakWithMe.jpg'
 ---
 
 [Speak With Me] an award winning VR game that transports you to Taipei, the
- capital of Taiwan. In game we teach you to speak Chinese. **You can visit the
-  site here:**
+capital of Taiwan. In game we teach you to speak Chinese. **You can visit the
+site here:**
 [Speak With Me]
 
 <!--- reference links --->

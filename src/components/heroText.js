@@ -53,7 +53,7 @@ class HeroText extends React.Component {
         <Typist.Backspace count={18} delay={500} />
         <span> Android Applications</span>
         <Typist.Backspace count={20} delay={500} />
-        <span> Poor Life Decisions</span>
+        <span> User Experiences </span>
         <Typist.Delay ms={300} />
         <span>.</span>
         <Typist.Delay ms={400} />

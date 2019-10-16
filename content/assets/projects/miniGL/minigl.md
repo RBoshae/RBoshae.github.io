@@ -2,7 +2,7 @@
 title: "MiniGL"
 date:  2017-11-28
 tags:  ["C++", "Graphics"]
-image: './MiniGL.png'
+image: './miniGL.png'
 ---
 
 [MiniGL] is a smaller implementation of OpenGl. **You can visit the site 

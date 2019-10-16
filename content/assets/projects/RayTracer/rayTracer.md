@@ -2,7 +2,7 @@
 title: "Ray Tracer"
 date:  2017-12-12
 tags:  ["C++", "Graphics"]
-image: './rayTracer.jpg'
+image: './rayTracer.png'
 ---
 
 [Ray Tracer] is a simple ray tracing program designed to simulate how light

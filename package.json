@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "rick-boshae-portfolio-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Rick Boshae's portfolio and blog powered by Gatsby and Markdown",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Rick Boshae <rick.boshae@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/RBoshae/rboshae.github.io/issues"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
@@ -50,15 +50,19 @@
   "devDependencies": {
     "prettier": "^1.18.2"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://rboshae.github.io",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "portfolio",
+    "rick",
+    "boshae",
+    "blog"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/RBoshae/rboshae.github.io.git"
   },
   "scripts": {
     "build": "gatsby build",
@@ -66,6 +70,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   }
 }

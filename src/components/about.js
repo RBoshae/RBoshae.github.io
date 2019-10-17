@@ -25,9 +25,9 @@ const About = () => {
             Angeles, California. Currently I work for L3Harris Technologies
             where I focus on software development for sonar systems. When I'm not
             hard at work decoding signal from noise, you'll likely find me
-            exploring new technologies and building useful things. I hope to
-            share a few things I've learned here and showcase some of my latest
-            projects here. For more informaion about me check out my blog and
+            exploring new technologies and building useful things. Here I will 
+            showcase a few of the things I've learned and some of my latest
+            projects. For more informaion about me check out my blog and
             follow some of my social media links above or at the bottom of the
             page.
             </p>

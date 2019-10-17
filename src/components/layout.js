@@ -38,7 +38,7 @@ const PageBase = ({ location, children }) => {
       <Helmet
         title="Rick Boshae"
         meta={[
-          { name: "description", content: "portfolio" },
+          { name: "description", content: "Rick's Portfolio & Blog" },
           { name: "keywords", content: "rick, boshae, portfolio, blog" },
           { name: "viewport", content: "width=device-width, intial-scale=1" }
         ]}

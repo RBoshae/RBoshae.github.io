@@ -15,7 +15,7 @@ const Base = styled.a`
     curser: pointer;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    background-image: url(https://media.giphy.com/media/l2Jhzp0gU419MQ0De/giphy.gif);
+    background-image: url(https://media.giphy.com/media/5uHVQE9VfUFNK/giphy.gif);
     test-decoration: none;
     -webkit-transform: rotate(354deg);
   }
